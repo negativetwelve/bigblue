@@ -1,0 +1,13 @@
+
+Go to the <%= link_to "FitBit Authorization Page", @auth_url, :target => "_blank" %> and click 'Allow' to link your FitBit account to Keas! Then enter the verifier on this page.	
+	
+<!--Routes to 'create' action for 'fitbit' controller-->
+<%= form_tag ('/fitbit') do %>
+  <%= text_field_tag "verifier", "Enter your verifier here" %>
+	<%= hidden_field_tag "token", @token %>
+	<%= hidden_field_tag "secret", @secret %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+<br><br>
+<%= link_to "Back to Michelle Test", {:controller => 'fitbit', :action => 'index'} %>

@@ -1,0 +1,54 @@
+<!--List all resources collected-->
+<!--Resource collections stored by day-->
+
+<!--
+<div>
+	<h2>Resource Collections</h2>
+	<% ResourceCollection.all.each do |rc| %>
+		<%= rc[:collected] %><br>
+	<% end %>
+</div>
+-->
+
+<!--List Subscriptions-->
+<!--
+<% if @fitbit == true %>
+	<div>
+		<h2>Subscriptions</h2>
+		<%= @subscriptions %>
+	</div>
+<% else %>
+	<%= link_to "Add Fitbit Account", {:controller => 'fitbit', :action => 'authorize'} %>
+<% end %>
+-->
+
+<!--Health Statistics-->
+<div>
+	<h2>Walking Statistics</h2>
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Distance (mi)</th>
+		</tr>
+		<% WalkingStatistic.all.each do |s| %>
+			<tr>
+				<td><%= s[:date] %></td>
+				<td><%= s[:time] %></td>
+				<td><%= s[:distance_in_miles] %></td>
+			</tr>
+		<% end %>
+	</table>
+	
+	<br>
+	<b>Total Distance Walked: </b> <%= @total_distance %>
+</div>
+
+<br>
+<% if @fitbit == true %>
+	<div>
+		<%= link_to "Remove subscription", {:controller => 'fitbit', :action => 'remove_sub'}, :remote => true %>
+	</div>
+<% else %>
+	<%= link_to "Add Fitbit Account", {:controller => 'fitbit', :action => 'authorize'} %>
+<% end %>
