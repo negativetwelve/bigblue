@@ -24,5 +24,5 @@ jay = [
 
 
 module.exports = (robot) ->
-  robot.hear /Jay|Jae|@jay|ryoo|jr /i, (msg) ->
+  robot.hear /Jay|Jae|@jay|ryoo|jr/i, (msg) ->
     msg.send msg.random jay

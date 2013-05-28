@@ -2,7 +2,7 @@
 #   Big Blue loves MC
 #
 # Dependencies:
-#   
+#
 #
 # Configuration:
 #
@@ -16,10 +16,9 @@
 #   jayyr
 
 mc = [
-  "Momma Chow, where are you? @bob",
-  "@bob, it is BigBlue calling",
-  "Momma Chow @bob, your children miss you: @noahg, @mattl, @harrisont, @jchan",
-  "Momma Chow wants us to call her @bob"
+  "Momma Chow, where are you?",
+  ", it is BigBlue calling",
+  "Momma Chow wants us to call her"
 ]
 
 
