@@ -1,7 +1,0 @@
-<% if current_user %>
-	Welcome <%= current_user.first_name %>!
-	<br><br>
-	<%= link_to "View FitBit Data", {:controller => 'fitbit', :action => 'index'} %>
-<% else %>
-	Please login or sign up to view FitBit data
-<% end %>
