@@ -24,7 +24,6 @@
 module.exports = (robot) ->
   robot.respond /trello idea (.*)/i, (msg) ->
     cardName = msg.match[1]
-    msg.send cardName
     if not cardName.length
       msg.send "You must give the card a name"
       return
@@ -43,7 +42,6 @@ createCard = (msg, cardName) ->
   Trello = require("node-trello")
   t = new Trello(process.env.BIGBLUE_TRELLOIDEA_KEY, process.env.BIGBLUE_TRELLOIDEA_TOKEN)
   t.post "/1/cards", {name: cardName, idList: process.env.BIGBLUE_TRELLOIDEA_LIST}, (err, data) ->
-    msg.send data
     if err
       msg.send "There was an error creating the card"
       return
