@@ -40,10 +40,10 @@ module.exports = (robot) ->
     createCard msg, cardName
 
 createCard = (msg, cardName) ->
-  msg.send "hello"
   Trello = require("node-trello")
   t = new Trello(process.env.BIGBLUE_TRELLOIDEA_KEY, process.env.BIGBLUE_TRELLOIDEA_TOKEN)
   t.post "/1/cards", {name: cardName, idList: process.env.BIGBLUE_TRELLOIDEA_LIST}, (err, data) ->
+    msg.send data
     if err
       msg.send "There was an error creating the card"
       return
