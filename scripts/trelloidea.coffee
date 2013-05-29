@@ -23,7 +23,7 @@
 
 module.exports = (robot) ->
   robot.respond /trello idea (.*)/i, (msg) ->
-    msg.send "working"
+    nsg.send BIGBLUE_TRELLOIDEA_KEY
     cardName = msg.match[1]
     if not cardName.length
       msg.send "You must give the card a name"
