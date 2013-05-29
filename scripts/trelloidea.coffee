@@ -10,7 +10,7 @@
 #   BIGBLUE_TRELLOIDEA_LIST - The list ID that you'd like to create cards for
 #
 # Commands:
-#   hubot trello idea card <name> - Create a new Trello card in BDD (Blueprint Driven Development Board)
+#   bigblue trello idea card <name> - Create a new Trello card in BDD (Blueprint Driven Development Board)
 #
 # Notes:
 #   To get your key, go to: https://trello.com/1/appKey/generate
@@ -22,7 +22,8 @@
 #   carmstrong
 
 module.exports = (robot) ->
-  robot.respond /trello idea card (.*)/i, (msg) ->
+  robot.respond /trello idea (.*)/i, (msg) ->
+    msg.send "working"
     cardName = msg.match[1]
     if not cardName.length
       msg.send "You must give the card a name"
