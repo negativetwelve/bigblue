@@ -16,8 +16,8 @@
 
 module.exports = (robot) ->
   robot.respond /lyrics for (.*) by (.*)/i, (msg) ->
-    song = msg.match[1]
-    artist = msg.match[2]
+    song = msg.match[1].trim().replace(/\s/g,'_')
+    artist = msg.match[2].trim().replace(/\s/g,'_')
     getLyrics msg, song, artist
   
   getLyrics = (msg, song, artist) ->
