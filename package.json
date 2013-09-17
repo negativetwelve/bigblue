@@ -28,7 +28,8 @@
     "underscore": "1.3.3",
     "underscore.string": "2.3.0",
     "wolfram": "0.2.2",
-    "node-trello": "latest"
+    "node-trello": "latest",
+    "ntwitter": "latest"
   },
   "engines": {
     "node": ">= 0.8.x",
