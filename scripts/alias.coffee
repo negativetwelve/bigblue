@@ -7,7 +7,7 @@ module.exports = (robot) ->
     "@stephaniek @wonjunj @mark #{message}"
 
   bpsf = (message) ->
-  	"@varunbloop @vivekbloop @jaylin @samlau #{message}"
+    "@varunbloop @vivekbloop @jaylin @samlau #{message}"
 
 
   robot.respond /@eteam (.*)$/i, (msg) ->
