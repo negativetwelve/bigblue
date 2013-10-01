@@ -12,4 +12,4 @@
 
 module.exports = (robot) ->
   robot.hear /what time is it/i, (msg) ->
-    msg.send ["http"]
+    msg.send ["http://berkeleytime.com/"]
