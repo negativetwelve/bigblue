@@ -10,7 +10,7 @@ module.exports = (robot) ->
     "@wonjunj @varunbloop @vivekbloop @jaylin @samlau #{message}"
 
   usomc = (message) ->
-    "@mark @allibloop @jonathanho @howardbloop @kevinbloop @will #{message}"
+    "@mark @bloopalli @jonathanho @howardbloop @kevinbloop @will #{message}"
 
   robot.respond /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
