@@ -7,7 +7,7 @@ module.exports = (robot) ->
     "@stephaniek @wonjunj @mark #{message}"
 
   bpsf = (message) ->
-    "@wonjunj @varunbloop @vivekbloop @jaylin @samlau #{message}"
+    "@wonjunj @vdawg @vivekbloop @jaylin @samlau #{message}"
 
   usomc = (message) ->
     "@mark @bloopalli @jonathanho @howardbloop @kevinbloop @will #{message}"
