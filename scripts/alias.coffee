@@ -4,10 +4,10 @@ module.exports = (robot) ->
     "@kg @brian @mc @melissa @jonathank #{message}"
 
   pls = (message) ->
-    "@stephaniek @wonjunj @mark #{message}"
+    "@stephaniek @1goon @mark #{message}"
 
   bpsf = (message) ->
-    "@wonjunj @vdawg @vivekbloop @jaylin @samlau #{message}"
+    "@1goon @vdawg @vivekbloop @jaylin @samlau #{message}"
 
   usomc = (message) ->
     "@mark @bloopalli @jonathanho @howardbloop @kevinbloop @will #{message}"
