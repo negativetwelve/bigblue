@@ -134,8 +134,4 @@ module.exports = (robot) ->
     for i in [0..tops.length-1]
       message.push("#{i+1}. #{tops[i].name} : #{tops[i].score}")
 
-    if(msg.match[1] == "top")
-      graphSize = Math.min(tops.length, Math.min(amount, 20))
-      message.splice(0, 0, clark(_.first(_.pluck(tops, "score"), graphSize)))
-
     msg.send message.join("\n")
