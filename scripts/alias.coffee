@@ -1,10 +1,10 @@
 module.exports = (robot) ->
 
   eteam = (message) ->
-    "@kg @brian @mc @melissa @jonathank #{message}"
+    "@melissa @mark @1goon @jaylin @alice #{message}"
 
   pls = (message) ->
-    "@stephaniek @1goon @mark #{message}"
+    "@samlau @kg @atsu @tonybloop #{message}"
 
   bpsf = (message) ->
     "@1goon @vdawg @vivekbloop @jaylin @samlau #{message}"
