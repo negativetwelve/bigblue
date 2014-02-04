@@ -12,14 +12,14 @@ module.exports = (robot) ->
   usomc = (message) ->
     "@mark @bloopalli @jonathanho @2Chainz @kevinbloop @will #{message}"
 
-  robot.respond /@eteam (.*)$/i, (msg) ->
+  robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
 
-  robot.respond /@pls (.*)$/i, (msg) ->
+  robot.hear /@pls (.*)$/i, (msg) ->
     msg.send pls(msg.match[1])
 
-  robot.respond /@bpsf (.*)$/i, (msg) ->
+  robot.hear /@bpsf (.*)$/i, (msg) ->
     msg.send bpsf(msg.match[1])
 
-  robot.respond /@usomc (.*)$/i, (msg) ->
+  robot.hear /@usomc (.*)$/i, (msg) ->
     msg.send usomc(msg.match[1])
