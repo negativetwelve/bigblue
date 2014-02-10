@@ -109,7 +109,7 @@ module.exports = (robot) ->
     name = msg.match[1].trim().toLowerCase()
     from = msg.message.user.name.toLowerCase()
     if from == "howard chen"
-      newScore = scoreKeeper.subtract("2chainz", "2chainz")
+      newScore = scoreKeeper.subtract("2chainz", from)
 
     newScore = scoreKeeper.add(name, from)
 
@@ -119,7 +119,7 @@ module.exports = (robot) ->
     name = msg.match[1].trim().toLowerCase()
     from = msg.message.user.name.toLowerCase()
     if from == "howard chen"
-      newScore = scoreKeeper.subtract("2chainz", "2chainz")
+      newScore = scoreKeeper.subtract("2chainz", from)
 
     newScore = scoreKeeper.subtract(name, from)
     if newScore? then msg.send "#{name} has #{newScore} points."
