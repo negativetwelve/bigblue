@@ -108,8 +108,10 @@ module.exports = (robot) ->
   robot.hear /([\w\S]+)([\W\s]*)?(\+\+)$/i, (msg) ->
     name = msg.match[1].trim().toLowerCase()
     from = msg.message.user.name.toLowerCase()
+    console.log(name)
+    console.log(from)
     if from == "howard chen"
-      newScore = scoreKeeper.subtract("2chainz", "big blue")
+      scoreKeeper.subtract("2chainz", "big blue")
 
     newScore = scoreKeeper.add(name, from)
 
@@ -118,8 +120,10 @@ module.exports = (robot) ->
   robot.hear /([\w\S]+)([\W\s]*)?(\-\-)$/i, (msg) ->
     name = msg.match[1].trim().toLowerCase()
     from = msg.message.user.name.toLowerCase()
+    console.log(name)
+    console.log(from)
     if from == "howard chen"
-      newScore = scoreKeeper.subtract("2chainz", "big blue")
+      scoreKeeper.subtract("2chainz", "big blue")
 
     newScore = scoreKeeper.subtract(name, from)
     if newScore? then msg.send "#{name} has #{newScore} points."
