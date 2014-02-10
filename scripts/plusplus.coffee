@@ -52,6 +52,10 @@ class ScoreKeeper
       @saveUser(user, from)
 
   subtract: (user, from) ->
+    console.log('subtract method called')
+    console.log(user)
+    console.log(from)
+    console.log(@validate(user, from))
     if @validate(user, from)
       user = @getUser(user)
       @cache.scores[user]--
