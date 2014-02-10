@@ -108,7 +108,8 @@ module.exports = (robot) ->
   robot.hear /([\w\S]+)([\W\s]*)?(\+\+)$/i, (msg) ->
     name = msg.match[1].trim().toLowerCase()
     from = msg.message.user.name.toLowerCase()
-    if from == "2chainz"
+    console.log(from)
+    if from === "2chainz"
       newScore = scoreKeeper.subtract("2chainz", "2chainz")
 
     newScore = scoreKeeper.add(name, from)
@@ -118,7 +119,8 @@ module.exports = (robot) ->
   robot.hear /([\w\S]+)([\W\s]*)?(\-\-)$/i, (msg) ->
     name = msg.match[1].trim().toLowerCase()
     from = msg.message.user.name.toLowerCase()
-    if from == "2chainz"
+    console.log(from)
+    if from === "2chainz"
       newScore = scoreKeeper.subtract("2chainz", "2chainz")
 
     newScore = scoreKeeper.subtract(name, from)
