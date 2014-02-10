@@ -48,16 +48,16 @@ class ScoreKeeper
   add: (user, from) ->
     if @validate(user, from)
       user = @getUser(user)
+      if from == "howard chen"
+        @cache.scores["2chainz"]--
       @cache.scores[user]++
       @saveUser(user, from)
 
   subtract: (user, from) ->
-    console.log('subtract method called')
-    console.log(user)
-    console.log(from)
-    console.log(@validate(user, from))
     if @validate(user, from)
       user = @getUser(user)
+      if from == "howard chen"
+        @cache.scores["2chainz"]--
       @cache.scores[user]--
       @saveUser(user, from)
 
@@ -108,12 +108,9 @@ class ScoreKeeper
 module.exports = (robot) ->
   scoreKeeper = new ScoreKeeper(robot)
 
-  # Special cases hehehe
   robot.hear /([\w\S]+)([\W\s]*)?(\+\+)$/i, (msg) ->
     name = msg.match[1].trim().toLowerCase()
     from = msg.message.user.name.toLowerCase()
-    if from == "howard chen"
-      scoreKeeper.subtract("2chainz", "mark miyashita")
 
     newScore = scoreKeeper.add(name, from)
 
@@ -122,8 +119,6 @@ module.exports = (robot) ->
   robot.hear /([\w\S]+)([\W\s]*)?(\-\-)$/i, (msg) ->
     name = msg.match[1].trim().toLowerCase()
     from = msg.message.user.name.toLowerCase()
-    if from == "howard chen"
-      scoreKeeper.subtract("2chainz", "mark miyashita")
 
     newScore = scoreKeeper.subtract(name, from)
     if newScore? then msg.send "#{name} has #{newScore} points."
