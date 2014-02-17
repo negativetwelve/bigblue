@@ -15,8 +15,11 @@ module.exports = (robot) ->
   rtr4c = (message) ->
     "@kg @brianbloop @kevinbloop @howardbloop @eugenebloop #{message}"
 
-  161 = (message) ->
+  r161 = (message) ->
     "@mark @bloopalli @eugenebloop @howardbloop @melissa @neezus @altonbloop @mark @tonybloop #{message}"
+    
+  ros = (message) ->
+    "@samlau @jonathanho @ethanbloop @bloopalli @deepsbloop @shuaigeswagga #{message}"
 
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
@@ -29,3 +32,12 @@ module.exports = (robot) ->
 
   robot.hear /@usomc (.*)$/i, (msg) ->
     msg.send usomc(msg.match[1])
+    
+  robot.hear /@rtr4c (.*)$/i, (msg) ->
+    msg.send rtr4c(msg.match[1])
+    
+  robot.hear /@r161 (.*)$/i, (msg) ->
+    msg.send r161(msg.match[1])
+    
+  robot.hear /@ros (.*)$/i, (msg) ->
+    msg.send ros(msg.match[1])
