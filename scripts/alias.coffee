@@ -12,6 +12,12 @@ module.exports = (robot) ->
   usomc = (message) ->
     "@mark @bloopalli @jonathanho @2Chainz @kevinbloop @will #{message}"
 
+  rtr4c = (message) ->
+    "@kg @brianbloop @kevinbloop @howardbloop @eugenebloop #{message}"
+
+  161 = (message) ->
+    "@mark @bloopalli @eugenebloop @howardbloop @melissa @neezus @altonbloop @mark @tonybloop #{message}"
+
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
 
