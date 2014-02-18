@@ -21,6 +21,12 @@ module.exports = (robot) ->
   ros = (message) ->
     "@samlau @jonathanho @ethanbloop @bloopalli @deepsbloop @shuaigeswagga #{message}"
 
+  ff = (message) ->
+    "@tonybloop @vdawg @will @2Chainz @neezus @alton #{message}"
+
+  odalc = (message) ->
+    "@atsu @pimplord @vivekbloop @johnbloop @anthonybloop #{message}"
+
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
 
@@ -41,3 +47,9 @@ module.exports = (robot) ->
 
   robot.hear /@ros (.*)$/i, (msg) ->
     msg.send ros(msg.match[1])
+
+  robot.hear /@ff (.*)$/i, (msg) ->
+    msg.send ff(msg.match[1])
+
+  robot.hear /@odalc (.*)$/i, (msg) ->
+    msg.send odalc(msg.match[1])
