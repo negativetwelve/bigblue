@@ -67,3 +67,13 @@ module.exports = (robot) ->
       message.push("#{i+1}. #{tops[i].name} : #{tops[i].score}")
 
     msg.send message.join("\n")
+
+  robot.respond /global stats (top|bottom) (\d+)/i, (msg) ->
+    amount = parseInt(msg.match[2])
+    message = []
+    tops = counter[msg.match[1]](amount, "global")
+
+    for i in [0..tops.length - 1]
+      message.push("#{i+1}. #{tops[i].name} : #{tops[i].score}")
+
+    msg.send message.join("\n")
