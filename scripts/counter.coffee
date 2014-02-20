@@ -26,13 +26,14 @@ class Counter
       @robot.brain.data.scores ||= {}
       @cache.scores = @robot.brain.data.scores
 
-  getUser: (user) ->
-    @cache.scores[user] ||= 0
+  getUser: (room, user) ->
+    roomCache = @cache.scores[room] ||= {}
+    roomCache[user] ||= 0
     user
 
   add: (room, user) ->
     roomCache = @cache.scores[room] ||= {}
-    user = @getUser(user)
+    user = @getUser(room, user)
     roomCache[user]++
 
   top: (amount, room) ->
