@@ -30,6 +30,7 @@ class Counter
   getUser: (room, user) ->
     roomCache = @cache.scores[room] ||= {}
     roomCache[user] ||= 0
+    @cache.scores["global"][user] ||= 0
     user
 
   add: (room, user) ->
