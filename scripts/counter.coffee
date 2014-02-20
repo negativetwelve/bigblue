@@ -25,6 +25,7 @@ class Counter
     @robot.brain.on 'loaded', =>
       @robot.brain.data.scores ||= {}
       @cache.scores = @robot.brain.data.scores
+      @cache.scores["global"] ||= {}
 
   getUser: (room, user) ->
     roomCache = @cache.scores[room] ||= {}
@@ -35,6 +36,7 @@ class Counter
     roomCache = @cache.scores[room] ||= {}
     user = @getUser(room, user)
     roomCache[user]++
+    @cache.scores["global"][user]++
 
   top: (amount, room) ->
     tops = []
