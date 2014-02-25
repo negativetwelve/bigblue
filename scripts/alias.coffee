@@ -13,10 +13,10 @@ module.exports = (robot) ->
     "@mark @bloopalli @jonathanho @2Chainz @kevinbloop @will #{message}"
 
   rtr4c = (message) ->
-    "@kg @brianbloop @kevinbloop @howardbloop @eugenebloop #{message}"
+    "@kg @brianbloop @kevinbloop @hguan @eugenebloop #{message}"
 
   r161 = (message) ->
-    "@mark @bloopalli @eugenebloop @howardbloop @melissa @neezus @altonbloop @mark @tonybloop #{message}"
+    "@mark @bloopalli @eugenebloop @hguan @melissa @neezus @altonbloop @mark @tonybloop #{message}"
 
   ros = (message) ->
     "@samlau @jonathanho @ethanbloop @bloopalli @deepsbloop @shuaigeswagga #{message}"
@@ -25,7 +25,7 @@ module.exports = (robot) ->
     "@tonybloop @vdawg @will @2Chainz @neezus @alton #{message}"
 
   odalc = (message) ->
-    "@atsu @pimplord @vivekbloop @johnbloop @anthonybloop #{message}"
+    "@atsu @pimplord @vivekbloop @jdu @anthonyy #{message}"
 
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
