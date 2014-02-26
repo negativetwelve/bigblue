@@ -46,6 +46,7 @@ class ScoreKeeper
     @cache.scores[user]
 
   add: (user, from) ->
+    console.log(@robot.brain)
     if @validate(user, from)
       user = @getUser(user)
       @cache.scores[user]++
