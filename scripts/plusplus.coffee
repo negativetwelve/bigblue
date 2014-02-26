@@ -45,8 +45,15 @@ class ScoreKeeper
 
     @cache.scores[user]
 
+  findUserByMentionName: (mentionName) ->
+    for user of @robot.brain.users.each
+      console.log(user.mention_name)
+      if user.mention_name == mentionName
+        console.log("same mention name")
+        return user.name
+    return mentionName
+
   add: (user, from) ->
-    console.log(@robot.brain)
     if @validate(user, from)
       user = @getUser(user)
       @cache.scores[user]++
@@ -108,8 +115,9 @@ module.exports = (robot) ->
   scoreKeeper = new ScoreKeeper(robot)
 
   robot.hear /([\w\S]+)([\W\s]*)?(\+\+)(.*)$/i, (msg) ->
-    name = msg.match[1].trim().toLowerCase()
+    name = msg.match[1].trim()
     from = msg.message.user.name.toLowerCase()
+    name = scoreKeeper.findUserByMentionName(name)
 
     newScore = scoreKeeper.add(name, from)
 
