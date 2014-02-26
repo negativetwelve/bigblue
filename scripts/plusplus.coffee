@@ -46,8 +46,8 @@ class ScoreKeeper
     @cache.scores[user]
 
   findUserByMentionName: (mentionName) ->
-    console.log(@robot.brain.users)
-    for user of @robot.brain.users
+    console.log(@robot.brain.data.users)
+    for user of @robot.brain.data.users
       console.log(user.mentionName)
       if user.mentionName == mentionName
         console.log("same mention name")
