@@ -48,8 +48,8 @@ class ScoreKeeper
   findUserByMentionName: (mentionName) ->
     console.log(@robot.brain.data.users)
     for user of @robot.brain.data.users
-      console.log(user.mentionName)
-      if user.mentionName == mentionName
+      console.log(user.mention_name)
+      if user.mention_name == mentionName
         console.log("same mention name")
         return user.name
     return mentionName
