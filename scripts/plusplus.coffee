@@ -46,6 +46,7 @@ class ScoreKeeper
     @cache.scores[user]
 
   findUserByMentionName: (mentionName) ->
+    console.log("what the brain has for users:")
     console.log(@robot.brain.data.users)
     for user_jid, user of @robot.brain.data.users
       console.log(user.mention_name)
