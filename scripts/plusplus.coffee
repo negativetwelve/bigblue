@@ -51,7 +51,6 @@ class ScoreKeeper
     for user_jid, user of @robot.brain.data.users
       console.log(user.mention_name)
       if user.mention_name == mentionName
-        console.log("same mention name")
         return user.name
     return mentionName
 
