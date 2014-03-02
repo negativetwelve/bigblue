@@ -53,7 +53,7 @@ class ScoreKeeper
       console.log(user.mention_name)
       if user.mention_name == mentionName
         return user.name
-    return mentionName
+    return mentionName.toLowerCase()
 
   add: (user, from) ->
     if @validate(user, from)
