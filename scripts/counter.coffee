@@ -20,29 +20,29 @@ class Counter
   constructor: (@robot) ->
     @cache =
       # room -> { user -> score }
-      scores: {}
+      counts: {}
 
     @robot.brain.on 'loaded', =>
-      @robot.brain.data.scores ||= {}
-      @cache.scores = @robot.brain.data.scores
-      @cache.scores["global"] ||= {}
+      @robot.brain.data.counts ||= {}
+      @cache.counts = @robot.brain.data.counts
+      @cache.counts["global"] ||= {}
 
   getUser: (room, user) ->
-    @cache.scores["global"] ||= {}
-    @cache.scores["global"][user] ||= 0
-    roomCache = @cache.scores[room] ||= {}
+    @cache.counts["global"] ||= {}
+    @cache.counts["global"][user] ||= 0
+    roomCache = @cache.counts[room] ||= {}
     roomCache[user] ||= 0
     user
 
   add: (room, user) ->
-    roomCache = @cache.scores[room] ||= {}
+    roomCache = @cache.counts[room] ||= {}
     user = @getUser(room, user)
     roomCache[user]++
-    @cache.scores["global"][user]++
+    @cache.counts["global"][user]++
 
   top: (amount, room) ->
     tops = []
-    roomCache = @cache.scores[room]
+    roomCache = @cache.counts[room]
 
     for name, score of roomCache
       tops.push(name: name, score: score)
