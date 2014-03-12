@@ -56,6 +56,7 @@ module.exports = (robot) ->
   robot.hear /(.*)$/i, (msg) ->
     room = msg.message.room
     from = msg.message.user.name
+    console.log(from)
     counter.add(room, from)
 
   robot.respond /stats (top|bottom) (\d+)/i, (msg) ->
