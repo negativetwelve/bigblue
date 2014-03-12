@@ -46,11 +46,7 @@ class ScoreKeeper
     @cache.scores[user]
 
   findUserByMentionName: (mentionName) ->
-    console.log("what the brain has for users:")
-    console.log(@robot.brain.data.users)
     for user_jid, user of @robot.brain.data.users
-      console.log("mention name: ")
-      console.log(user.mention_name)
       if user.mention_name == mentionName
         return user.name
     return mentionName.toLowerCase()
@@ -69,7 +65,7 @@ class ScoreKeeper
       @cache.scores[user]--
       @saveUser(user, from)
 
-  scoreForUser: (user) -> 
+  scoreForUser: (user) ->
     user = @getUser(user)
     @cache.scores[user]
 
