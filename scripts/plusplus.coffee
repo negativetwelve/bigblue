@@ -46,7 +46,7 @@ class ScoreKeeper
 
   findUserByMentionName: (mentionName) ->
     mentionName = mentionName.replace(/@/g, "")
-    console.log(@robot.brain.users())
+    console.log(@robot.brain.data.users)
     console.log("looking for mention name: #{mentionName}")
     for user_jid, user of @robot.brain.data.users
       if user.mention_name == mentionName
@@ -60,6 +60,10 @@ class ScoreKeeper
       if user.name == user_name
         return user.mention_name
     return "Could not find: #{user_name}."
+
+  setMentionName: (user_name, mention_name) ->
+    user = @robot.brain.userForName(user_name)
+    user.mention_name = mention_name
 
   add: (user, from) ->
     if @validate(user, from)
@@ -169,3 +173,9 @@ module.exports = (robot) ->
     person = msg.match[1]
     console.log(person)
     msg.send scoreKeeper.findMentionNameByUser(person)
+
+  robot.respond /set mention name for \s (.*)/i, (msg) ->
+    name = msg.match[2].trim()
+    mention_name = msg.match[3].trim()
+    console.log("name: #{name}, mention_name: #{mention_name}.")
+    scoreKeeper.setMentionName name, mention_name
