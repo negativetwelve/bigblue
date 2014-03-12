@@ -51,8 +51,8 @@ class ScoreKeeper
     console.log(@robot.brain.data.users)
     for user_jid, user of @robot.brain.data.users
       if user.mention_name == mentionName
-        console.log("mention name: " + mentionName)
-        console.log("user name: " + user.name)
+        console.log("\t mention name: " + mentionName)
+        console.log("\t user name: " + user.name)
         return user.name
     return mentionName
 
