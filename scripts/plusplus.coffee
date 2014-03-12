@@ -48,6 +48,8 @@ class ScoreKeeper
   findUserByMentionName: (mentionName) ->
     for user_jid, user of @robot.brain.data.users
       if user.mention_name == mentionName
+        console.log("mention name: " + mentionName)
+        console.log("user name: " + user.name)
         return user.name
     return mentionName.toLowerCase()
 
@@ -101,7 +103,8 @@ class ScoreKeeper
     tops = []
 
     for name, score of @cache.scores
-      tops.push(name: name, score: score)
+      unless typeof score != int
+        tops.push(name: name, score: score)
 
     tops.sort((a,b) -> b.score - a.score).slice(0,amount)
 
