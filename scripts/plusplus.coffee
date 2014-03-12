@@ -56,6 +56,7 @@ class ScoreKeeper
     return mentionName
 
   findMentionNameByUser: (user_name) ->
+    console.log(user_name)
     for user_jid, user of @robot.brain.data.users
       if user.name == user_name
         return user.mention_name
