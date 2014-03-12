@@ -169,4 +169,4 @@ module.exports = (robot) ->
   robot.respond /mention name for (.*)$/i, (msg) ->
     person = msg.match[1]
     console.log(person)
-    msg.send findMentionNameByUser(person)
+    msg.send scoreKeeper.findMentionNameByUser(person)
