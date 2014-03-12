@@ -42,7 +42,6 @@ class ScoreKeeper
     @robot.brain.data.scores[user] = @cache.scores[user]
     @robot.brain.data.scoreLog[from] = @cache.scoreLog[from]
     @robot.brain.emit('save', @robot.brain.data)
-
     @cache.scores[user]
 
   findUserByMentionName: (mentionName) ->
