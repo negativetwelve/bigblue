@@ -48,7 +48,6 @@ class ScoreKeeper
   findUserByMentionName: (mentionName) ->
     mentionName = mentionName.replace(/@/g, "")
     console.log("looking for mention name: #{mentionName}")
-    console.log(@robot.brain.data.users)
     for user_jid, user of @robot.brain.data.users
       if user.mention_name == mentionName
         console.log("mention name: " + mentionName)
