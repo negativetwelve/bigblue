@@ -120,18 +120,27 @@ module.exports = (robot) ->
 
   robot.hear /([\w\S]+)([\W\s]*)?(\+\+)(.*)$/i, (msg) ->
     name = msg.match[1].trim()
-    from = msg.message.user.name.toLowerCase()
-    name = scoreKeeper.findUserByMentionName(name)
+    from = msg.message.user.name
+    real_name = scoreKeeper.findUserByMentionName(name)
 
-    newScore = scoreKeeper.add(name, from)
+    if from == real_name
+      msg.send "Don't be selfish, #{name}."
+      return
+
+    newScore = scoreKeeper.add(real_name, from)
 
     if newScore? then msg.send "#{name} has #{newScore} points."
 
   robot.hear /([\w\S]+)([\W\s]*)?(\-\-)(.*)$/i, (msg) ->
     name = msg.match[1].trim().toLowerCase()
-    from = msg.message.user.name.toLowerCase()
+    from = msg.message.user.name
+    real_name = scoreKeeper.findUserByMentionName(name)
 
-    newScore = scoreKeeper.subtract(name, from)
+    if from == real_name
+      msg.send "Why are you minus minusing yourself, #{name}?"
+      return
+
+    newScore = scoreKeeper.subtract(real_name, from)
     if newScore? then msg.send "#{name} has #{newScore} points."
 
   robot.respond /score (for\s)?(.*)/i, (msg) ->
