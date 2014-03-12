@@ -63,7 +63,8 @@ class ScoreKeeper
 
   setMentionName: (user_name, mention_name) ->
     user = @robot.brain.userForName(user_name)
-    user.mention_name = mention_name
+    @robot.brain.data.users[user.id].mention_name = mention_name
+    console.log(@robot.brain.data.users[user.id])
 
   add: (user, from) ->
     if @validate(user, from)
