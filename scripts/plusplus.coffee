@@ -103,7 +103,7 @@ class ScoreKeeper
     tops = []
 
     for name, score of @cache.scores
-      unless typeof score != int
+      unless typeof score != "number"
         tops.push(name: name, score: score)
 
     tops.sort((a,b) -> b.score - a.score).slice(0,amount)
