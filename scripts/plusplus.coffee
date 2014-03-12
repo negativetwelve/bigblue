@@ -58,7 +58,7 @@ class ScoreKeeper
 
   findMentionNameByUser: (user_name) ->
     for user_jid, user of @robot.brain.data.users
-      if user.name = user_name
+      if user.name == user_name
         return user.mention_name
     return "Could not find: #{user_name}."
 
