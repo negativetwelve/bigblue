@@ -56,6 +56,12 @@ class ScoreKeeper
         return user.name
     return mentionName.toLowerCase()
 
+  findMentionNameByUser: (user_name) ->
+    for user_jid, user of @robot.brain.data.users
+      if user.name = user_name
+        return user.mention_name
+    return "Could not find: #{user_name}."
+
   add: (user, from) ->
     if @validate(user, from)
       user = @getUser(user)
@@ -159,3 +165,8 @@ module.exports = (robot) ->
       message.push("#{i+1}. #{tops[i].name} : #{tops[i].score}")
 
     msg.send message.join("\n")
+
+  robot.respond /mention name for (.*)$/i, (msg) ->
+    person = msg.match[1]
+    console.log(person)
+    msg.send findMentionNameByUser(person)
