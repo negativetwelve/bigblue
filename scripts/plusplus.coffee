@@ -53,7 +53,7 @@ class ScoreKeeper
         console.log("mention name: " + mentionName)
         console.log("user name: " + user.name)
         return user.name
-    return mentionName.toLowerCase()
+    return mentionName
 
   findMentionNameByUser: (user_name) ->
     for user_jid, user of @robot.brain.data.users
@@ -137,7 +137,7 @@ module.exports = (robot) ->
     if newScore? then msg.send "#{name} has #{newScore} points."
 
   robot.hear /([\w\S]+)([\W\s]*)?(\-\-)(.*)$/i, (msg) ->
-    name = msg.match[1].trim().toLowerCase()
+    name = msg.match[1].trim()
     from = msg.message.user.name
     real_name = scoreKeeper.findUserByMentionName(name)
 
