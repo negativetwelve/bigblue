@@ -10,7 +10,7 @@ module.exports = (robot) ->
     "@1goon @vdawg @vivekbloop @jaylin @samlau #{message}"
 
   usomc = (message) ->
-    "@mark @bloopalli @jonathanho @2Chainz @kevinbloop @will #{message}"
+    "@mark @bloopalli @jonathanho @AsapHowie @kevinbloop @will #{message}"
 
   rtr4c = (message) ->
     "@kg @brianbloop @kevinbloop @hguan @eugenebloop #{message}"
@@ -22,7 +22,7 @@ module.exports = (robot) ->
     "@samlau @jonathanho @ethanbloop @bloopalli @deepsbloop @shuaigeswagga #{message}"
 
   ff = (message) ->
-    "@tonybloop @vdawg @will @2Chainz @neezus @alton #{message}"
+    "@tonybloop @vdawg @will @AsapHowie @neezus @alton #{message}"
 
   odalc = (message) ->
     "@atsu @pimplord @vivekbloop @jdu @anthonyy #{message}"
