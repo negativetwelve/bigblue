@@ -13,6 +13,7 @@
 #   hubot score <name>
 #   hubot top <amount>
 #   hubot bottom <amount>
+#   hubot scoreboard
 #
 # Author:
 #   ajacksified
@@ -165,6 +166,17 @@ module.exports = (robot) ->
     message = []
 
     tops = scoreKeeper[msg.match[1]](amount)
+
+    for i in [0..tops.length-1]
+      message.push("#{i+1}. #{tops[i].name} : #{tops[i].score}")
+
+    msg.send message.join("\n")
+
+  robot.respond /(scoreboard)/i, (msg) ->
+    amount = parseInt(msg.match[2])
+    message = []
+
+    tops = scoreKeeper[top](scoreKeeper.cache.scores.length)
 
     for i in [0..tops.length-1]
       message.push("#{i+1}. #{tops[i].name} : #{tops[i].score}")
