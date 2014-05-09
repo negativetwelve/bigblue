@@ -172,10 +172,10 @@ module.exports = (robot) ->
 
     msg.send message.join("\n")
 
-  robot.respond /(scoreboard)/i, (msg) ->
+  robot.respond /scoreboard/i, (msg) ->
     message = []
 
-    tops = scoreKeeper[top](scoreKeeper.cache.scores.length)
+    tops = scoreKeeper['top'](scoreKeeper.cache.scores.length)
 
     for i in [0..tops.length-1]
       message.push("#{i+1}. #{tops[i].name} : #{tops[i].score}")
