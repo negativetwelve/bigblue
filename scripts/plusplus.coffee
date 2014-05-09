@@ -173,7 +173,6 @@ module.exports = (robot) ->
     msg.send message.join("\n")
 
   robot.respond /(scoreboard)/i, (msg) ->
-    amount = parseInt(msg.match[2])
     message = []
 
     tops = scoreKeeper[top](scoreKeeper.cache.scores.length)
