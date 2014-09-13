@@ -4,7 +4,7 @@ module.exports = (robot) ->
     "@1goon @samlau @tonybloop @alton @shuaigeswagga #{message}"
 
   pls = (message) ->
-    "@samlau @kg @atsu @tonybloop #{message}"
+    "@JSONDerulo @bloopalli @kevinbloop @vdawg @melissa @vivekbloop #{message}"
 
   bpsf = (message) ->
     "@1goon @vdawg @vivekbloop @jaylin @samlau #{message}"
