@@ -6,6 +6,9 @@ module.exports = (robot) ->
   pls = (message) ->
     "@JSONDerulo @bloopalli @kevinbloop @vdawg @melissa @vivekbloop #{message}"
 
+  bpgirls = (message) ->
+    "@elizabeth @bloopalli @eileenbloop @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica #{message}"
+
   bpsf = (message) ->
     "@1goon @vdawg @vivekbloop @jaylin @samlau #{message}"
 
