@@ -56,3 +56,6 @@ module.exports = (robot) ->
 
   robot.hear /@odalc (.*)$/i, (msg) ->
     msg.send odalc(msg.match[1])
+
+  robot.hear /@bpgirls (.*)$/i, (msg) ->
+    msg.send bpgirls(msg.match[1])
