@@ -23,6 +23,10 @@ clark = require("clark").clark
 
 class ScoreKeeper
   constructor: (@robot) ->
+    @premium_users = ["Brian Wong", "Kevin Gong", "Michelle Chow", "Jonathan Kim", "Melissa Huang", "Mark Miyashita", "Stephanie Ku", "Wonjun Jeong", "Alice Oh", "Eric Ren", "Jamin Wong", 
+                      "Justin Chan", "Noah Gilmore", "Jay Ryoo", "Shirley Liu", "Kenneth Gao", "Noel Moldvai", "Matt Leung", "Harrison Tsai", "Helen Weng", "Big Blue", "Jessica Shen", 
+                      "Jessica Lin", "Sam Lau", "Nishant Desai", "Varun Rau", "Atsu Kakitani", "Will Tang", "Kevin Wu", "Howard Chen", "Jonathan Ho", "Jennifer Min", "Vincent Tian", "Eugene Kim",
+                      "Allison Leong", "Vivek Raghuram", "Tony Wu", "Ethan Chiou", "Deepak Warrier", "John Du", "Alton Zheng", "Howard Guan", "Byron Zhang", "Anthony Sutardja", "Brian Liou"]
     @cache =
       scoreLog: {}
       scores: {}
@@ -67,6 +71,15 @@ class ScoreKeeper
     user = @robot.brain.userForName(user_name)
     @robot.brain.data.users[user.id].mention_name = mention_name
     console.log(@robot.brain.data.users[user.id])
+
+  isPremiumUser: (user_name) ->
+    isPremium = false
+    for name of @premium_users
+      if name == user_name
+        isPremium = true
+        break
+    return isPremium
+
 
   add: (user, from) ->
     if @validate(user, from)
@@ -139,6 +152,10 @@ module.exports = (robot) ->
       msg.send "Don't be selfish, #{name}."
       return
 
+    if !scoreKeeper.isPremiumUser(from)
+      msg.send "Sorry, that feature is only available for premium users. Contact your admin for premium access."
+      return
+
     newScore = scoreKeeper.add(real_name, from)
 
     if newScore? then msg.send "#{name} has #{newScore} points."
@@ -150,6 +167,10 @@ module.exports = (robot) ->
 
     if from == real_name
       msg.send "Why are you minus minusing yourself, #{name}?"
+      return
+
+    if !scoreKeeper.isPremiumUser(from)
+      msg.send "Sorry, that feature is only available for premium users. Contact your admin for premium access."
       return
 
     newScore = scoreKeeper.subtract(real_name, from)
