@@ -9,6 +9,9 @@ module.exports = (robot) ->
   bpgirls = (message) ->
     "@elizabeth @bloopalli @eileenbloop @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica #{message}"
 
+  bpindians = (message) ->
+    "@vdawg @neezus @deepsbloop @vivekbloop #{message}"
+
   bpsf = (message) ->
     "@1goon @vdawg @vivekbloop @jaylin @samlau #{message}"
 
@@ -59,3 +62,6 @@ module.exports = (robot) ->
 
   robot.hear /@bpgirls (.*)$/i, (msg) ->
     msg.send bpgirls(msg.match[1])
+
+  robot.hear /@bpindians (.*)$/i, (msg) ->
+    msg.send bpindians(msg.match[1])
