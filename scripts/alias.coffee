@@ -6,6 +6,9 @@ module.exports = (robot) ->
   pls = (message) ->
     "@JSONDerulo @bloopalli @kevinbloop @vdawg @melissa @vivekbloop #{message}"
 
+  bpasians = (message) ->
+    "@all #{message}"
+
   bpgirls = (message) ->
     "@elizabeth @bloopalli @eileenbloop @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica #{message}"
 
@@ -65,3 +68,6 @@ module.exports = (robot) ->
 
   robot.hear /@bpindians (.*)$/i, (msg) ->
     msg.send bpindians(msg.match[1])
+
+  robot.hear /@bpasians (.*)$/i, (msg) ->
+    msg.send bpasians(msg.match[1])
