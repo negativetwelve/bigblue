@@ -79,3 +79,6 @@ module.exports = (robot) ->
   robot.hear /@ws (.*)$/i, (msg) ->
     msg.send ws(msg.match[1])
 
+  robot.hear /@JAMMM (.*)$/i, (msg) ->
+    msg.send ws(msg.match[1])
+
