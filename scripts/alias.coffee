@@ -39,6 +39,9 @@ module.exports = (robot) ->
   ws = (message) ->
     "@melissa @mark @jodreen @maxbloop @andrewbloop #{message}"
 
+  worldreader = (message) ->
+    "@jdu @ethanbloop @eileenbloop @will @vdawg #{message}"
+
   # Commands to listen for
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
@@ -78,6 +81,12 @@ module.exports = (robot) ->
 
   robot.hear /@ws (.*)$/i, (msg) ->
     msg.send ws(msg.match[1])
+
+  robot.hear /@worldreader (.*)$/i, (msg) ->
+    msg.send worldreader(msg.match[1])
+
+  robot.hear /@JEEW (.*)$/i, (msg) ->
+    msg.send worldreader(msg.match[1])
 
   robot.hear /@JAMMM (.*)$/i, (msg) ->
     msg.send ws(msg.match[1])
