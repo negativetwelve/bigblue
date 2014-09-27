@@ -42,6 +42,9 @@ module.exports = (robot) ->
   bphouse = (message) ->
     "@mark @1goon @melissa @jdu @atsu #{message}"
 
+  worldreader = (message) ->
+    "@jdu @ethanbloop @eileenbloop @will @vdawg #{message}"
+
   # Commands to listen for
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
@@ -87,4 +90,10 @@ module.exports = (robot) ->
 
   robot.hear /@bphouse (.*)$/i, (msg) ->
     msg.send bphouse(msg.match[1])
+
+  robot.hear /@worldreader (.*)$/i, (msg) ->
+    msg.send worldreader(msg.match[1])
+
+  robot.hear /@JEEW (.*)$/i, (msg) ->
+    msg.send worldreader(msg.match[1])
 
