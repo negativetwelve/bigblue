@@ -34,7 +34,7 @@ module.exports = (robot) ->
     msg.send eteam(msg.match[1])
 
   robot.hear /@phc (.*)$/i, (msg) ->
-    msg.send eteam(msg.match[1])
+    msg.send phc(msg.match[1])
 
   robot.hear /@pls (.*)$/i, (msg) ->
     msg.send pls(msg.match[1])
