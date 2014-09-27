@@ -37,7 +37,7 @@ module.exports = (robot) ->
     "@atsu @pimplord @vivekbloop @jdu @anthonyy #{message}"
 
   phc = (message) ->
-    "@JSONDerulo @j @neezus @pimplord @deepsbloop"
+    "@JSONDerulo @j @neezus @pimplord @deepsbloop #{message}"
 
   ws = (message) ->
     "@melissa @mark @jodreen @maxbloop @andrewbloop #{message}"
