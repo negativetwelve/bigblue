@@ -36,6 +36,9 @@ module.exports = (robot) ->
   odalc = (message) ->
     "@atsu @pimplord @vivekbloop @jdu @anthonyy #{message}"
 
+  phc = (message) ->
+    "@JSONDerulo @j @neezus @pimplord @deepsbloop"
+
   ws = (message) ->
     "@melissa @mark @jodreen @maxbloop @andrewbloop #{message}"
 
@@ -48,6 +51,9 @@ module.exports = (robot) ->
   # Commands to listen for
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
+
+  robot.hear /@phc (.*)$/i, (msg) ->
+    msg.send phc(msg.match[1])
 
   robot.hear /@pls (.*)$/i, (msg) ->
     msg.send pls(msg.match[1])
