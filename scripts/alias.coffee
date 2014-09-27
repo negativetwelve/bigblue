@@ -1,16 +1,25 @@
 module.exports = (robot) ->
 
   eteam = (message) ->
-    "@melissa @mark @1goon @jaylin @alice #{message}"
+    "@1goon @samlau @tonybloop @alton @shuaigeswagga #{message}"
 
   pls = (message) ->
-    "@samlau @kg @atsu @tonybloop #{message}"
+    "@JSONDerulo @bloopalli @kevinbloop @vdawg @melissa @vivekbloop #{message}"
+
+  bpasians = (message) ->
+    "@all #{message}"
+
+  bpgirls = (message) ->
+    "@elizabeth @bloopalli @eileenbloop @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica #{message}"
+
+  bpindians = (message) ->
+    "@vdawg @neezus @deepsbloop @vivekbloop #{message}"
 
   bpsf = (message) ->
     "@1goon @vdawg @vivekbloop @jaylin @samlau #{message}"
 
   usomc = (message) ->
-    "@mark @bloopalli @jonathanho @AsapHowie @kevinbloop @will #{message}"
+    "@mark @bloopalli @jonathanho @JSONDerulo @kevinbloop @will #{message}"
 
   rtr4c = (message) ->
     "@kg @brianbloop @kevinbloop @hguan @eugenebloop #{message}"
@@ -22,7 +31,7 @@ module.exports = (robot) ->
     "@samlau @jonathanho @ethanbloop @bloopalli @deepsbloop @shuaigeswagga #{message}"
 
   ff = (message) ->
-    "@tonybloop @vdawg @will @AsapHowie @neezus @alton #{message}"
+    "@tonybloop @vdawg @will @JSONDerulo @neezus @alton #{message}"
 
   odalc = (message) ->
     "@atsu @pimplord @vivekbloop @jdu @anthonyy #{message}"
@@ -30,6 +39,16 @@ module.exports = (robot) ->
   phc = (message) ->
     "@JSONDerulo @j @neezus @pimplord @deepsbloop"
 
+  ws = (message) ->
+    "@melissa @mark @jodreen @maxbloop @andrewbloop #{message}"
+
+  bphouse = (message) ->
+    "@mark @1goon @melissa @jdu @atsu #{message}"
+
+  worldreader = (message) ->
+    "@jdu @ethanbloop @eileenbloop @will @vdawg #{message}"
+
+  # Commands to listen for
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
 
@@ -59,3 +78,28 @@ module.exports = (robot) ->
 
   robot.hear /@odalc (.*)$/i, (msg) ->
     msg.send odalc(msg.match[1])
+
+  robot.hear /@bpgirls (.*)$/i, (msg) ->
+    msg.send bpgirls(msg.match[1])
+
+  robot.hear /@bpindians (.*)$/i, (msg) ->
+    msg.send bpindians(msg.match[1])
+
+  robot.hear /@bpasians (.*)$/i, (msg) ->
+    msg.send bpasians(msg.match[1])
+
+  robot.hear /@ws (.*)$/i, (msg) ->
+    msg.send ws(msg.match[1])
+
+  robot.hear /@JAMMM (.*)$/i, (msg) ->
+    msg.send ws(msg.match[1])
+
+  robot.hear /@bphouse (.*)$/i, (msg) ->
+    msg.send bphouse(msg.match[1])
+
+  robot.hear /@worldreader (.*)$/i, (msg) ->
+    msg.send worldreader(msg.match[1])
+
+  robot.hear /@JEEW (.*)$/i, (msg) ->
+    msg.send worldreader(msg.match[1])
+
