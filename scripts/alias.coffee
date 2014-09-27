@@ -39,6 +39,9 @@ module.exports = (robot) ->
   ws = (message) ->
     "@melissa @mark @jodreen @maxbloop @andrewbloop #{message}"
 
+  bphouse = (message) ->
+    "@mark @1goon @melissa @jdu @atsu #{message}"
+
   # Commands to listen for
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
@@ -81,4 +84,7 @@ module.exports = (robot) ->
 
   robot.hear /@JAMMM (.*)$/i, (msg) ->
     msg.send ws(msg.match[1])
+
+  robot.hear /@bphouse (.*)$/i, (msg) ->
+    msg.send bphouse(msg.match[1])
 
