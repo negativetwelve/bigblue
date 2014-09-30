@@ -48,6 +48,9 @@ module.exports = (robot) ->
   worldreader = (message) ->
     "@jdu @ethanbloop @eileenbloop @will @vdawg #{message}"
 
+  revolv = (message) ->
+    "@anthonyy @ericbloop @jaylin @noah @vivekbloop #{message}"
+
   # Commands to listen for
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
@@ -106,3 +109,5 @@ module.exports = (robot) ->
   robot.hear /@projecthowardchen (.*)$/i, (msg) ->
     msg.send phc(msg.match[1])
 
+  robot.hear /@revolv (.*)$/i, (msg) ->
+    msg.send revolv(msg.match[1])
