@@ -10,7 +10,7 @@ module.exports = (robot) ->
     "@all #{message}"
 
   bpgirls = (message) ->
-    "@elizabeth @bloopalli @eileenbloop @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica #{message}"
+    "@elizabeth @bloopalli @ilean @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica #{message}"
 
   bpindians = (message) ->
     "@vdawg @neezus @deepsbloop @vivekbloop #{message}"
@@ -46,7 +46,7 @@ module.exports = (robot) ->
     "@mark @1goon @melissa @jdu @atsu #{message}"
 
   worldreader = (message) ->
-    "@jdu @ethanbloop @eileenbloop @will @vdawg #{message}"
+    "@jdu @ethanbloop @ilean @will @vdawg #{message}"
 
   revolv = (message) ->
     "@anthonyy @ericbloop @jaylin @noah @vivekbloop #{message}"
