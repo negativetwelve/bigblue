@@ -51,6 +51,9 @@ module.exports = (robot) ->
   revolv = (message) ->
     "@anthonyy @ericbloop @jaylin @noah @vivekbloop #{message}"
 
+  bplol = (message) ->
+    "@1goon @jaylin @j @jdu @kwu #{message}"
+
   # Commands to listen for
   robot.hear /@eteam (.*)$/i, (msg) ->
     msg.send eteam(msg.match[1])
@@ -111,3 +114,6 @@ module.exports = (robot) ->
 
   robot.hear /@revolv (.*)$/i, (msg) ->
     msg.send revolv(msg.match[1])
+
+  robot.hear /@bplol (.*)$/i, (msg) ->
+    msg.send bplol(msg.match[1])
