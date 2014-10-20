@@ -28,7 +28,7 @@ module.exports = (robot) ->
     "@mark @bloopalli @eugenebloop @hguan @melissa @neezus @altonbloop @mark @tonybloop #{message}"
 
   ros = (message) ->
-    "@samlau @jonathanho @ethanbloop @bloopalli @deepsbloop @shuaigeswagga #{message}"
+    "@samlau @jonathanho @nahte @bloopalli @deepsbloop @shuaigeswagga #{message}"
 
   ff = (message) ->
     "@tonybloop @vdawg @will @JSONDerulo @neezus @alton #{message}"
@@ -46,7 +46,7 @@ module.exports = (robot) ->
     "@mark @1goon @melissa @jdu @atsu #{message}"
 
   worldreader = (message) ->
-    "@jdu @ethanbloop @ilean @will @vdawg #{message}"
+    "@jdu @nahte @ilean @will @vdawg #{message}"
 
   revolv = (message) ->
     "@anthonyy @ericbloop @jaylin @noah @vivekbloop #{message}"
