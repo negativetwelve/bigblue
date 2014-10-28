@@ -1,10 +1,10 @@
 module.exports = (robot) ->
 
   eteam = (message) ->
-    "@1goon @samlau @tonybloop @alton @shuaigeswagga #{message}"
+    "@1goon @sam @tonybloop @alton @shuaigeswagga #{message}"
 
   pls = (message) ->
-    "@JSONDerulo @bloopalli @kevinbloop @vdawg @melissa @vivekbloop #{message}"
+    "@JSONDerulo @bloopalli @happybirthdayatsu @vdawg @melissa @vivekbloop #{message}"
 
   bpasians = (message) ->
     "@all #{message}"
@@ -16,19 +16,10 @@ module.exports = (robot) ->
     "@vdawg @neezus @deepsbloop @vivekbloop #{message}"
 
   bpsf = (message) ->
-    "@1goon @vdawg @vivekbloop @jaylin @samlau #{message}"
-
-  usomc = (message) ->
-    "@mark @bloopalli @jonathanho @JSONDerulo @kevinbloop @will #{message}"
-
-  rtr4c = (message) ->
-    "@kg @brianbloop @kevinbloop @hguan @eugenebloop #{message}"
-
-  r161 = (message) ->
-    "@mark @bloopalli @eugenebloop @hguan @melissa @neezus @altonbloop @mark @tonybloop #{message}"
+    "@1goon @vdawg @vivekbloop @jaylin @sam #{message}"
 
   ros = (message) ->
-    "@samlau @jonathanho @nahte @bloopalli @deepsbloop @shuaigeswagga #{message}"
+    "@sam @nahte @jodreen @ilean #{message}"
 
   ff = (message) ->
     "@tonybloop @vdawg @will @JSONDerulo @neezus @alton #{message}"
