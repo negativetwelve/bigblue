@@ -56,7 +56,7 @@ class ScoreKeeper
     for user_jid, user of @robot.brain.data.users
       if user.name == user_name
         return user.mention_name
-    return ""
+    return user_name
 
   setMentionName: (user_name, mention_name) ->
     user = @robot.brain.userForName(user_name)
@@ -105,7 +105,7 @@ class ScoreKeeper
     messageIsSpam
 
   validate: (user, from) ->
-    user != from && user != "" && !@isSpam(user, from) && findMentionNameByUser(from.name) != ""
+    user != from && user != "" && !@isSpam(user, from) && user.email != ""
 
   length: () ->
     @cache.scoreLog.length
