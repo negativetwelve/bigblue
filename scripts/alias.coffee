@@ -1,7 +1,7 @@
 module.exports = (robot) ->
 
   eteam = (message) ->
-    "@1goon @sam @tonybloop @alton @shuaigeswagga #{message}"
+    "@jaylin @sam @JSONDerulo @merrymelissaday @vivekbloop #{message}"
 
   pls = (message) ->
     "@JSONDerulo @bloopalli @happybirthdayatsu @vdawg @melissa @vivekbloop #{message}"
