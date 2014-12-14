@@ -50,13 +50,13 @@ class ScoreKeeper
     for user_jid, user of @robot.brain.data.users
       if user.mention_name == mentionName
         return user.name
-    return mentionName
+    return ""
 
   findMentionNameByUser: (user_name) ->
     for user_jid, user of @robot.brain.data.users
       if user.name == user_name
         return user.mention_name
-    return "Could not find: #{user_name}."
+    return user_name
 
   setMentionName: (user_name, mention_name) ->
     user = @robot.brain.userForName(user_name)
@@ -65,6 +65,8 @@ class ScoreKeeper
   add: (user, from) ->
     if @validate(user, from)
       user = @getUser(user)
+      if user == ""
+        return
       @cache.scores[user]++
       @saveUser(user, from)
 
@@ -103,7 +105,7 @@ class ScoreKeeper
     messageIsSpam
 
   validate: (user, from) ->
-    user != from && user != "" && !@isSpam(user, from)
+    user != from && user != "" && !@isSpam(user, from) && user.email != ""
 
   length: () ->
     @cache.scoreLog.length
