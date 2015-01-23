@@ -4,13 +4,16 @@ module.exports = (robot) ->
     "@jaylin @sam @JSONDerulo @merrymelissaday @vivekbloop #{message}"
 
   pls = (message) ->
-    "@JSONDerulo @bloopalli @happybirthdayatsu @vdawg @melissa @vivekbloop #{message}"
+    "@pimplord @neezus @j @noah @vdawg #{message}"
+
+  chairs = (message) ->
+    "@jessica @soo @tinabloop @yishanbloop #{message}"
 
   bpasians = (message) ->
     "@all #{message}"
 
   bpgirls = (message) ->
-    "@elizabeth @bloopalli @ilean @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica #{message}"
+    "@elizabeth @bloopalli @ilean @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica @soo @tinabloop @yishanbloop #{message}"
 
   bpindians = (message) ->
     "@vdawg @neezus @deepsbloop @vivekbloop #{message}"
@@ -41,7 +44,7 @@ module.exports = (robot) ->
 
   revolv = (message) ->
     "@anthonyy @ericbloop @jaylin @noah @vivekbloop #{message}"
-  
+
   ea = (message) ->
     "@merrymelissaday @warren @tofu @elizabeth @chuckbobxd #{message}"
 
@@ -54,6 +57,9 @@ module.exports = (robot) ->
 
   robot.hear /@pls (.*)$/i, (msg) ->
     msg.send pls(msg.match[1])
+
+  robot.hear /@chairs (.*)$/i, (msg) ->
+    msg.send chairs(msg.match[1])
 
   robot.hear /@bpsf (.*)$/i, (msg) ->
     msg.send bpsf(msg.match[1])
@@ -108,7 +114,7 @@ module.exports = (robot) ->
 
   robot.hear /@revolv (.*)$/i, (msg) ->
     msg.send revolv(msg.match[1])
-  
+
   robot.hear /@ea (.*)$/i, (msg) ->
     msg.send ea(msg.match[1])
 
