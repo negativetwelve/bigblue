@@ -4,16 +4,16 @@ module.exports = (robot) ->
     "@jaylin @sam @JSONDerulo @merrymelissaday @vivekbloop #{message}"
 
   pls = (message) ->
-    "@pimplord @neezus @j @noah @vdawg #{message}"
+    "@pimplord @neezus @j @noah @vdawg @sam #{message}"
 
   chairs = (message) ->
-    "@jessica @soo @tinabloop @yishanbloop #{message}"
+    "@jessica @soo @tinabloop @yishanbloop @bae @bloopalli #{message}"
 
   bpasians = (message) ->
     "@all #{message}"
 
   bpgirls = (message) ->
-    "@elizabeth @bloopalli @ilean @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica @soo @tinabloop @yishanbloop #{message}"
+    "@elizabeth @bloopalli @ilean @jodreen @jaylin @melissa @tfu @jenniferbloop @ericabloop @jessica @soo @tinabloop @yishanbloop @sameerabloop @NikitaRau #{message}"
 
   bpindians = (message) ->
     "@vdawg @neezus @deepsbloop @vivekbloop #{message}"
