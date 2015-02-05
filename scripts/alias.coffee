@@ -31,22 +31,28 @@ module.exports = (robot) ->
     "@atsu @pimplord @vivekbloop @jdu @anthonyy #{message}"
 
   phc = (message) ->
-    "@JSONDerulo @j @neezus @pimplord @deepsbloop #{message}"
+    "@pimplord @alton @tonybloop @warren @ShimmyLi #{message}"
 
   ws = (message) ->
-    "@melissa @mark @jodreen @maxbloop @andrewbloop #{message}"
+    "@neezus @jodreen @maxbloop @andrewbloop @chuckbobxd #{message}"
 
   bphouse = (message) ->
     "@mark @1goon @melissa @jdu @atsu #{message}"
 
   worldreader = (message) ->
-    "@jdu @nahte @ilean @will @vdawg #{message}"
+    "@jdu @nahte @will @vdawg @nnarayen #{message}"
 
   revolv = (message) ->
-    "@anthonyy @ericbloop @jaylin @noah @vivekbloop #{message}"
+    "@ericbloop @noah @sameerabloop @ayk @AndyQin #{message}"
+
+  foodshift = (message) ->
+    "@j @bloopalli @atsu @NikitaRau @ericabloop #{message}"
 
   ea = (message) ->
     "@merrymelissaday @warren @tofu @elizabeth @chuckbobxd #{message}"
+
+  blueops = (message) ->
+    "@sam @shieh @quintontarantino @tofu @bae #{message}"
 
   bplol = (message) ->
     "@1goon @jaylin @j @jdu @kwu #{message}"
@@ -102,6 +108,12 @@ module.exports = (robot) ->
 
   robot.hear /@worldreader (.*)$/i, (msg) ->
     msg.send worldreader(msg.match[1])
+
+  robot.hear /@foodshift (.*)$/i, (msg) ->
+    msg.send foodshift(msg.match[1])
+
+  robot.hear /@blueops (.*)$/i, (msg) ->
+    msg.send blueops(msg.match[1])
 
   robot.hear /@JEEW (.*)$/i, (msg) ->
     msg.send worldreader(msg.match[1])
