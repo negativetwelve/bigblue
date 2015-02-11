@@ -43,7 +43,7 @@ module.exports = (robot) ->
     "@jdu @nahte @will @vdawg @nnarayen #{message}"
 
   revolv = (message) ->
-    "@ericbloop @noah @sameerabloop @ayk @AndyQin #{message}"
+    "@generic @noah @sameerabloop @ayk @AndyQin #{message}"
 
   foodshift = (message) ->
     "@j @bloopalli @atsu @NikitaRau @ericabloop #{message}"
